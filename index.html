@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Soft Landing Page by Tooplate</title>
+    <!--
+        
+        Template 2106 Soft Landing
+        
+        http://www.tooplate.com/view/2106-soft-landing
+        
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="team" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/owl.carousel.css">
+    <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="static/css/font-awesome.min.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="static/css/tooplate-style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-cookies.js"></script>
+
+    <script src="static/js/app.js"></script>
+</head>
+<body ng-app="myApp">
+    
+    <!-- PRE LOADER -->
+    <section class="preloader">
+        <div class="spinner">
+            
+            <span class="spinner-rotate"></span>
+            
+        </div>
+    </section>
+    
+    
+    <!-- MENU -->
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+            
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+                
+                <!-- lOGO TEXT HERE -->
+                <a href="index.html" class="navbar-brand">Soft Landing</a>
+            </div>
+            
+            <!-- MENU LINKS -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home" class="smoothScroll">Home</a></li>
+                    <li><a href="#sign" class="smoothScroll">Sign up / Log in</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- Header FEATURE -->
+    <section id="home" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-offset-3 col-md-6 col-sm-12">
+                    <div class="home-info">
+                        <h3>professional landing page</h3>
+                        <h1>We help you manage your website successfully!</h1>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- sign FEATURE -->
+    <section id="sign" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                        <!-- <h1>What you get</h1> -->
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-sm-6">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="active"><a href="#tab01" aria-controls="tab01" role="tab" data-toggle="tab">Sign up</a></li>
+                        
+                        <li><a href="#tab02" aria-controls="tab02" role="tab" data-toggle="tab">Log in</a></li>
+                        
+                    </ul>
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab01" role="tabpanel" ng-controller="register">
+                            <div class="tab-pane-item">
+                                <h2>Sign up</h2>
+                                <form id="register_form" method="post" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label for="email">Email address:</label>
+                                        <input type="email" class="form-control" id="register_email" ng-model="sign_email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd">Password:</label>
+                                        <input type="password" class="form-control" id="register_pwd" ng-model="sign_password">
+                                    </div>
+                                    <input type="submit" class="btn btn-default" ng-click="myFunc(sign_email,sign_password)">
+                                    {{flag}}
+                                </form>
+                                
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab02" role="tabpanel" ng-controller="login">
+                            <div class="tab-pane-item">
+                                <h2>Log in</h2>
+                                <form>
+                                    <div class="form-group" >
+                                        <label for="email">Email address:</label>
+                                        <input type="email" class="form-control" id="login_email" ng-model="log_email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd">Password:</label>
+                                        <input type="password" class="form-control" id="login_pwd" ng-model="log_password">
+                                    </div>
+                                    <input type="submit" class="btn btn-default" ng-click="myFunc(log_email, log_password)"> {{flag}}
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-md-6 col-sm-6">
+                    <div class="feature-image">
+                        <img src="/static/images/feature-mockup.png" class="img-responsive" alt="Thin Laptop">                             
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- FOOTER -->
+    <footer id="footer" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                
+                <div class="copyright-text col-md-12 col-sm-12">
+                    <div class="col-md-6 col-sm-6">
+                        <p>Copyright &copy; 2018 Company Name - Design:
+                            <a rel="nofollow" href="http://tooplate.com">Tooplate</a></p>
+                        </div>
+                        
+                        <div class="col-md-6 col-sm-6">
+                            <ul class="social-icon">
+                                <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+        
+        
+        
+    </body>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.stellar.min.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <script src="/static/js/smoothscroll.js"></script>
+    <script src="/static/js/custom.js"></script>
+    
+    </html>

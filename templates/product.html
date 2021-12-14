@@ -1,0 +1,25 @@
+<section  data-stellar-background-ratio="0.5" style="height: 100vh; padding-top: 100px;" ng-controller="category">
+    <div class="container" style="width: 600px;">
+        <div class="row">
+            <div id="category" class="col-md-12 form-group">
+                <label for="cat">Category list:</label>
+                <select id="cat" class="form-control" ng-change="statechange(category_select)" ng-model="category_select">
+                    <option ng-repeat="x in cat" value="{{x.id}}"> {{x.category_name}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="width: 800px; overflow: scroll;" ng-repeat="x in products">
+        <a href="#!products">
+            <div class="row" style="margin: 20px; border: 1px; border-radius: 10px; background-color: antiquewhite;" ng-click="sendData(x)">
+                <div class="img col-md-3">
+                    <img src="http://localhost:8000/media/{{x.img[1].img}}" style="width: 150px; height: 150px;"> 
+                </div>
+                <div class="item col-md-9">
+                    <h4>{{x.product_name}}</h4>
+                    <p>{{x.product_description}}</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
